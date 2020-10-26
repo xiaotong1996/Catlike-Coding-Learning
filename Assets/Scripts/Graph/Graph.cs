@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Graph : MonoBehaviour
 {
@@ -14,10 +15,8 @@ public class Graph : MonoBehaviour
     [SerializeField]
     FunctionLibrary.FunctionName function = default;
 
-    public void setFunction(int index)
-    {
-        function = (FunctionLibrary.FunctionName)index;
-    }
+    [SerializeField]
+    TMP_Dropdown functionSelecter = default;
     Transform[] points;
 
 
@@ -37,6 +36,7 @@ public class Graph : MonoBehaviour
 
     void Update()
     {
+        function = (FunctionLibrary.FunctionName)functionSelecter.value;
         FunctionLibrary.GraphFunction f = FunctionLibrary.GetGraphFunction(function);
         float time = Time.time;
         float step = 2f / resolution;

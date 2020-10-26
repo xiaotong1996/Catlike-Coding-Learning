@@ -8,7 +8,8 @@ public class Clock : MonoBehaviour
     [SerializeField]
     Transform hoursTransform = default, minutesTransform = default, secondsTransform = default;
 
-    private bool continuous;
+    [SerializeField]
+    bool continuous;
 
     public bool Continous
     {
