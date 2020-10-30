@@ -8,7 +8,8 @@ public class ScenesManager : MonoBehaviour
     private static ScenesManager _instance = default;
     static string[] scenesName ={
         "ClockScene",
-        "GraphScene"
+        "GraphScene",
+        "Movement1Scene"
     };
 
     [SerializeField]
