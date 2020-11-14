@@ -9,7 +9,9 @@ public class ScenesManager : MonoBehaviour
     static string[] scenesName ={
         "ClockScene",
         "GraphScene",
-        "Movement1Scene"
+        "MovementScene",
+        "MovementPhysicScene",
+        "MovementSlopesScene"
     };
 
     [SerializeField]
@@ -37,12 +39,19 @@ public class ScenesManager : MonoBehaviour
             return;
         }
         _instance = this;
+        setButtonListener();
         DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         checkButtonState();
+    }
+
+    void setButtonListener()
+    {
+        nextButton.onClick.AddListener(NextScene);
+        prevButton.onClick.AddListener(PrevScene);
     }
 
     void checkButtonState()
@@ -54,9 +63,7 @@ public class ScenesManager : MonoBehaviour
         }
         else
         {
-            nextButton.onClick.AddListener(NextScene);
             nextButton.gameObject.SetActive(true);
-
         }
         if (currentSceneIndex <= 0)
         {
@@ -64,7 +71,6 @@ public class ScenesManager : MonoBehaviour
         }
         else
         {
-            prevButton.onClick.AddListener(PrevScene);
             prevButton.gameObject.SetActive(true);
         }
     }
