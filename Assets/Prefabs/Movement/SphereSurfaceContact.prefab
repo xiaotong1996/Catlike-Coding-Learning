@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2875873493524811499}
   - component: {fileID: -716226465793827739}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: SphereSurfaceContact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,13 +221,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3242a1a3fde70f64eb118545b8f5bcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 30
   maxAcceleration: 10
   maxAirAcceleration: 1
   maxSnapSpeed: 100
   jumpHeight: 2
   maxAirJumps: 1
-  maxGroundAngle: 40
+  maxGroundAngle: 46
   probeDistance: 1
   probeMask:
     serializedVersion: 2

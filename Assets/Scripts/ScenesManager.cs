@@ -11,7 +11,8 @@ public class ScenesManager : MonoBehaviour
         "GraphScene",
         "MovementScene",
         "MovementPhysicScene",
-        "MovementSlopesScene"
+        "MovementSlopesScene",
+        "MovementSurfaceContactScene"
     };
 
     [SerializeField]
